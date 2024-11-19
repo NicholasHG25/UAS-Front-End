@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .navbar-nav .nav-link {
+            color: white !important;
+            /* Ubah warna menjadi putih */
+        }
+    
+        .navbar-nav .nav-link:hover {
+            color: #ccc !important;
+            /* Opsional: tambahkan warna hover */
+        }
+    </style>
   </head>
   <body>
     
@@ -23,14 +34,125 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sports">Olahraga</a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Shop</a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="dropdown-header">Protein</h6>
+                                    <a class="dropdown-item" href="#">Whey Protein</a>
+                                    <a class="dropdown-item" href="#">Whey Protein Isolate</a>
+                                    <a class="dropdown-item" href="#">Mass Weight Gainers</a>
+                                    <a class="dropdown-item" href="#">Casein Protein</a>
+                                    <a class="dropdown-item" href="#">Plant Protein</a>
+                                    <a class="dropdown-item" href="#">Protein Bars Snacks</a>
+                                </div>
+                                <div class="col">
+                                    <h6 class="dropdown-header">Performance Recovery</h6>
+                                    <a class="dropdown-item" href="#">Pre-Workout</a>
+                                    <a class="dropdown-item" href="#">Post Workout</a>
+                                    <a class="dropdown-item" href="#">Creatine</a>
+                                    <a class="dropdown-item" href="#">BCAA Amino Acids</a>
+                                    <a class="dropdown-item" href="#">Hydration</a>
+                                </div>
+                                <div class="col">
+                                    <h6 class="dropdown-header">Vitamins Supplements</h6>
+                                    <a class="dropdown-item" href="#">Multivitamins</a>
+                                    <a class="dropdown-item" href="#">Fish Oil Omegas</a>
+                                    <a class="dropdown-item" href="#">Probiotics</a>
+                                    <a class="dropdown-item" href="#">Herbs Natural Solutions</a>
+                                </div>
+                                <div class="col">
+                                    <h6 class="dropdown-header">Trending</h6>
+                                    <a class="dropdown-item" href="#">BodyFit</a>
+                                    <a class="dropdown-item" href="#">Gift Cards</a>
+                                    <a class="dropdown-item" href="#">New Arrivals</a>
+                                    <a class="dropdown-item" href="#">Sales Deals</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#rekomen">Rekomendasi</a>
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="workoutsDropdown" data-bs-toggle="dropdown" aria-expanded="false">Workouts</a>
+                        <div class="dropdown-menu mega-menu" style="left: -49rem;">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <a href="#build">
+                                        <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg" alt="Build"
+                                            class="img-fluid">
+                                        <h6 class="dropdown-header mt-2" style="margin-bottom: 0 !important;">Build</h6>
+                                    </a>
+                                    <p style="margin-top: 0 !important;">Get stronger, make progress, and crush your old PR.</p>
+                                </div>
+                                <div class="col text-center">
+                                    <a href="#gain-strength">
+                                        <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg" alt="Gain Strength"
+                                            class="img-fluid">
+                                        <h6 class="dropdown-header mt-2">Gain Strength</h6>
+                                    </a>
+                                    <p>Get stronger, make progress and crush your old PR.</p>
+                                </div>
+                                <div class="col text-center">
+                                    <a href="#lose-weight">
+                                        <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg" alt="Lose Weight"
+                                            class="img-fluid">
+                                        <h6 class="dropdown-header mt-2">Lose Weight</h6>
+                                    </a>
+                                    <p>Burn fat the right way without losing size and strength.</p>
+                                </div>
+                                <div class="col text-center">
+                                    <a href="#sports-performance">
+                                        <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg"
+                                            alt="Sports Performance" class="img-fluid">
+                                        <h6 class="dropdown-header mt-2">Sports Performance</h6>
+                                    </a>
+                                    <p>Train harder, boost endurance, and level up your performance.</p>
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resep">Resep</a>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="recipesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Resep</a>
+                        <div class="dropdown-menu mega-menu" style="left: -55rem;">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <a href="#healthy-breakfast">
+                                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+                                            alt="Healthy Breakfast" class="img-fluid">
+                                        <h6 class="dropdown-header mt-2">Healthy Breakfast</h6>
+                                    </a>
+                                    <p>Start your day with nutrient-packed breakfast recipes.</p>
+                                </div>
+                                <div class="col text-center">
+                                    <a href="#quick-snacks">
+                                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Quick Snacks"
+                                            class="img-fluid">
+                                        <h6 class="dropdown-header mt-2">Quick Snacks</h6>
+                                    </a>
+                                    <p>Enjoy tasty and healthy snacks on the go.</p>
+                                </div>
+                                <div class="col text-center">
+                                    <a href="#post-workout-meals">
+                                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+                                            alt="Post-Workout Meals" class="img-fluid">
+                                        <h6 class="dropdown-header mt-2">Post-Workout Meals</h6>
+                                    </a>
+                                    <p>Refuel your body with these protein-rich meals.</p>
+                                </div>
+                                <div class="col text-center">
+                                    <a href="#desserts">
+                                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Desserts"
+                                            class="img-fluid">
+                                        <h6 class="dropdown-header mt-2">Desserts</h6>
+                                    </a>
+                                    <p>Indulge in sweet treats without guilt.</p>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#gizi">Nutrisi</a>
