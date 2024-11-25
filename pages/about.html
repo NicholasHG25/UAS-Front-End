@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="stayHealthyApp" ng-controller="MainController">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>About Us - Stay Healthy</title>
+    <style>
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 300% 300%;
+            z-index: -1;
+        }
+    
+        .containers {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+            font-size: 2.5rem;
+            color: #000;
+            /* Ubah warna judul menjadi hitam */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    
+        .recipe img {
+            display: block;
+            /* Membuat gambar sebagai blok */
+            margin: 0 auto 20px;
+            /* Pusatkan gambar secara horizontal dan beri margin bawah */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+    
+        p {
+            margin-bottom: 1rem;
+            /* Beri spasi antar paragraf */
+        }
+    
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">StayHealthy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-left" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#sports">Olahraga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#rekomen">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#resep">Resep</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#gizi">Nutrisi</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="text-white me-3">
+                        <i class="fas fa-user fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white me-3">
+                        <i class="fas fa-search fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end of menu navigasi-->
+    
+    <div class="background"></div>
+    <!-- MAIN CONTENT -->
+    <div class="containers">
+        <h1>About Us</h1>
+        <div class="recipe">
+            <img src="https://t3.ftcdn.net/jpg/01/35/70/90/360_F_135709080_2XHH0eeTGZ6rAaxgyuLKKdTaUCZAgPCZ.jpg"
+                alt="Salad Segar" />
+            <p style="text-align: justify;">{{ aboutDescription }}</p>
+
+            <h2>Latar Belakang Pembuatan</h2>
+            <p style="text-align: justify;">{{ background }}</p>
+
+            <h2>Sasaran Pasar / Target Market</h2>
+            <p style="text-align: justify;">{{ targetMarket }}</p>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark text-light pt-4">
+        <div class="container">
+            <div class="row">
+                <!-- Left Section: Navigation Links and Social Media Icons -->
+                <div class="col-md-12">
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-light">Home</a></li>
+                        <li><a href="#" class="text-light">Shop</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <!-- Social Media Icons -->
+    
+                    <div class="wrapper d-flex justify-content-center my-4">
+                        <div class="button">
+                            <a href="https://facebook.com" target="_blank">
+                                <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                        <div class="button">
+                            <a href="https://twitter.com" target="_blank">
+                                <div class="icon"><i class="fab fa-twitter"></i></div>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                        <div class="button">
+                            <a href="https://github.com/NicholasHG25/UAS-untuk-CLone.git" target="_blank">
+                                <div class="icon"><i class="fab fa-github"></i></div>
+                                <span>Github</span>
+                            </a>
+                        </div>
+                        <div class="button">
+                            <a href="https://instagram.com" target="_blank">
+                                <div class="icon"><i class="fab fa-instagram"></i></div>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center">
+                <p class="mb-0" style="height: 50px;">&copy; 2024 StayHealthy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AngularJS Script -->
+    <script>
+        angular.module('stayHealthyApp', [])
+            .controller('MainController', function ($scope) {
+                $scope.aboutDescription = "Website ini merupakan platform panduan gaya hidup sehat yang memiliki fokus pada Kesehatan Fisik, olahraga, fitness, resep makanan sehat, dan nutrisi. Pengunjung akan menemukan berbagai informasi seperti tips berolahraga, panduan langkah-langkah latihan fitness, panduan tentang gizi seimbang, hingga resep makanan sehat yang mudah dipraktikkan. Website ini bertujuan untuk membantu, memotivasi, dan memberikan inspirasi kepada pengunjung dalam mengadopsi kebiasaan sehat yang dapat diterapkan dalam rutinitas sehari-hari. Dengan informasi yang jelas dan praktis, website ini ingin memudahkan orang-orang untuk memulai perjalanan menuju hidup yang lebih sehat";
+                $scope.background = "Seiring berkembangnya kesadaran masyarakat akan pentingnya kesehatan, semakin banyak orang yang ingin memulai gaya hidup sehat, namun seringkali mereka merasa kesulitan karena kurangnya pengetahuan dan panduan yang tepat. Banyak dari mereka tidak tahu harus memulai dari mana terkait olahraga, gizi, atau pola makan sehat yang efektif. Website ini dibuat untuk mengatasi hambatan tersebut, menyediakan informasi yang dapat dipercaya serta mudah diakses. Dengan bahasa yang sederhana dan materi yang relevan, tujuan utamanya adalah membantu masyarakat memahami bahwa keseimbangan antara olahraga, nutrisi yang baik, dan pola makan sehat merupakan kunci untuk mencapai kesehatan optimal.";
+                $scope.targetMarket = "Website ini ditujukan untuk individu berusia 18 hingga 40 tahun yang ingin memperbaiki atau memulai gaya hidup sehat. Target audiens utama adalah remaja, dewasa, hingga orang tua yang ingin meningkatkan kebugaran fisik, mencari panduan olahraga yang tepat, resep makanan sehat yang mudah dibuat, serta edukasi mengenai pentingnya nutrisi seimbang. Selain itu, website ini juga cocok bagi mereka yang berusaha mencapai bentuk tubuh ideal, memperbaiki rutinitas olahraga, atau sekadar menjaga kesehatan dalam jangka panjang.";
+            });
+    </script>
+<!-- Bootstrap JS -->
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

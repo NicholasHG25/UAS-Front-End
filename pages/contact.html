@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #343a40, #212529, #495057, #343a40);
+            background-size: 400% 400%;
+            animation: backgroundMove 10s ease infinite;
+            min-height: 115vh;
+            /* Pastikan tinggi minimum 100% layar */
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+            /* Warna teks default menjadi putih */
+        }
+    
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0% 50%;
+            }
+    
+            50% {
+                background-position: 100% 50%;
+            }
+    
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    
+        main {
+            flex: 1;
+            /* Memastikan main mengambil sisa ruang di antara header dan footer */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+            /* Jarak atas dari navigasi */
+            margin-bottom: 50px;
+            /* Jarak bawah ke footer */
+        }
+    
+        /* Kontainer Form */
+        .contact-container {
+            background-color: rgba(33, 37, 41, 0.95);
+            /* Sedikit transparan */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            flex: 1;
+            /* Memastikan elemen ini mengisi ruang vertikal */
+        }
+    
+        .contact-container h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+            /* Warna judul form menjadi putih */
+        }
+    
+        label {
+            color: #ffffff;
+            /* Warna label input menjadi putih */
+        }
+    
+        input,
+        textarea {
+            color: #ffffff;
+            /* Warna teks dalam input dan textarea menjadi putih */
+        }
+    
+        input::placeholder,
+        textarea::placeholder {
+            color: #bfbfbf;
+            /* Placeholder warna abu-abu agar terlihat lebih lembut */
+        }
+    
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: #ffffff;
+            /* Warna teks footer menjadi putih */
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+    
+        /* Tambahkan margin ke bawah dari form ke footer */
+        .contact-container {
+            margin-bottom: 40px;
+        }
+        .btn-submit {
+        background-color: #28a745; /* Warna hijau */
+        color: #ffffff; /* Warna teks putih */
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-submit:hover {
+        background-color: #218838; /* Warna hijau lebih gelap saat hover */
+        transform: scale(1.05);
+    }
+
+    .btn-submit:active {
+        background-color: #1e7e34; /* Warna hijau lebih gelap saat ditekan */
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">StayHealthy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-left" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#sports">Olahraga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#rekomen">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#resep">Resep</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#gizi">Nutrisi</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="text-white me-3">
+                        <i class="fas fa-user fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white me-3">
+                        <i class="fas fa-search fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end of menu navigasi-->
+
+
+   <main>
+        <div class="contact-container">
+            <h3>Contact Us</h3>
+            <form action="https://formspree.io/f/xldewzdd" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email" />
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required
+                        placeholder="Write your message here"></textarea>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light pt-4">
+        <div class="container">
+            <div class="row">
+                <!-- Left Section: Navigation Links and Social Media Icons -->
+                <div class="col-md-12">
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-light">Home</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li><a href="#" class="text-light">Shop</a></li>
+                    </ul>
+                    <!-- Social Media Icons -->
+    
+                    <div class="wrapper d-flex justify-content-center my-4">
+                        <div class="button">
+                            <a href="https://facebook.com" target="_blank">
+                                <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                        <div class="button">
+                            <a href="https://twitter.com" target="_blank">
+                                <div class="icon"><i class="fab fa-twitter"></i></div>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                        <div class="button">
+                            <a href="https://github.com/NicholasHG25/UAS-untuk-CLone.git" target="_blank">
+                                <div class="icon"><i class="fab fa-github"></i></div>
+                                <span>Github</span>
+                            </a>
+                        </div>
+                        <div class="button">
+                            <a href="https://instagram.com" target="_blank">
+                                <div class="icon"><i class="fab fa-instagram"></i></div>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center">
+                <p class="mb-0" style="height: 50px;">&copy; 2024 StayHealthy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

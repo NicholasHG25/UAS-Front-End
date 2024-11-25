@@ -12,7 +12,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   .container-fluid {
-    height:196vh;
+    height:170vh;
   }
 }
 
@@ -254,10 +254,14 @@ html,body{
   width: 100%;
   background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
+
 /* footer*/
 /* Media icon*/
+
+
+
 .wrapper .button{
-  display: inline-block;
+  display: center;
   height: 60px;
   width: 60px;
   margin: 0 5px;
@@ -333,36 +337,3 @@ html,body{
   text-decoration: none;
   color: inherit;
 }
-
-/* Form */
-.contact-me {
-  text-align: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .contact-me {
-      text-align: center;
-  }
-}
-
-.contact-form {
-  max-width: 300px; 
-  margin: 0 auto;
-}
-
-.contact-form input, 
-.contact-form textarea {
-  width: 100%;
-  font-size: 0.9rem;
-}
-
-  /* Mengatur ukuran tombol */
-.contact-form button {
-  font-size: 0.85rem; 
-  padding: 5px 10px;
-}
-
-
-
-
-
