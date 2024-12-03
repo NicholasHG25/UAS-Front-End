@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StayHealthy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    /* CSS for the blur background effect */
+    .blur-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+      backdrop-filter: blur(10px); /* Blur effect */
+      z-index: 1050;
+    }
+
+    /* Styling the modal card */
+    .modal-content {
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    /* Styling for the subscribe card */
+    .subscribe-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    /* Blur background when modal is active */
+    .modal-backdrop {
+      backdrop-filter: blur(10px);
+    }
+  </style>
+  <body>
+    
+    <!-- Menu Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">StayHealthy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="latihan_kardio.html">Olahraga</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rekomendasi.html">Rekomendasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resep.html">Resep</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gizi.html">Nutrisi</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Menu Navigasi -->
+
+  <!-- Section: Workout Plans -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Latihan Kardio</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-lg">
+          <img src="https://www.tagar.id/Asset/uploads2019/1644995887567-olahraga-cardio.jpg" class="card-img-top" alt="Kardio"
+            data-bs-toggle="popover" data-bs-trigger="hover focus"
+            data-bs-placement="left"
+            data-bs-content="Latihan kardio adalah jenis latihan yang meningkatkan detak jantung dan pernapasan Anda untuk menjaga kebugaran. Cocok untuk pemula hingga tingkat lanjut."
+            title="Detail Latihan Kardio">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Latihan Kardio</h5>
+            <p class="card-text">Latihan kardio adalah latihan yang berfokus pada pembakaran kalori dan peningkatan kesehatan jantung. Klik di bawah untuk memulai latihan sederhana di rumah:</p>
+            <div class="mt-auto">
+              <a href="https://youtu.be/0YCbphEiQgM?si=6vq17BwK7Kgr-BHz" target="_blank" class="btn btn-outline-primary btn-sm">Latihan Cardio Mudah</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-lg">
+          <img src="https://th.bing.com/th/id/OIP.zi20eGfe2ZO9Vo52cWDnxAHaE8?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="card-img-top" alt="Warm up"
+            data-bs-toggle="popover" data-bs-trigger="hover focus"
+            data-bs-placement="left"
+            title="Pemanasan"
+            data-bs-content="Pemanasan atau warm-up penting untuk mempersiapkan tubuh sebelum latihan intens. Ini membantu meningkatkan sirkulasi darah dan fleksibilitas otot.">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Warm Up</h5>
+            <p class="card-text">Lakukan pemanasan singkat untuk mempersiapkan tubuh sebelum latihan. Klik untuk melihat video panduan pemanasan yang aman:</p>
+            <div class="mt-auto">
+              <a href="https://youtu.be/KpraNmEu_oI?si=lFPv1i8MZaZTyvTA" target="_blank" class="btn btn-outline-primary btn-sm">Lihat Warming Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-lg">
+          <img src="https://i0.wp.com/vshred.com/blog/wp-content/uploads/2019/09/15-DIFFERENT-HIIT-CARDIO-EXERCISES-FOR-MAX-CALORIE-BURN-workout.png?resize=656%2C454&ssl=1" class="card-img-top" alt="HIT Cardio"
+            data-bs-toggle="popover" data-bs-trigger="hover focus"
+            data-bs-placement="left"
+            title="HIT Cardio"
+            data-bs-content="Latihan HIT Cardio berdurasi 15 menit ini dirancang untuk membakar kalori dengan cepat. Cocok bagi yang ingin latihan singkat namun efektif.">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">HIT Cardio 15 Menit</h5>
+            <p class="card-text">Butuh latihan singkat dan efektif? Cobalah HIT Cardio ini! Klik di bawah untuk memulai sesi 15 menit yang intens:</p>
+            <div class="mt-auto">
+              <a href="https://youtu.be/Fc85U3UgC0E?si=RRvRPfiUZpc6rQz4" target="_blank" class="btn btn-outline-primary btn-sm">Lihat HIT Cardio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Row for Card 4, 5, and 6 (Placed below Card 1, 2, 3) -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card h-100 shadow-lg">
+          <img src="https://i.ytimg.com/vi/jVRlQFSsODg/maxresdefault.jpg" class="card-img-top" alt="Dance Cardio"
+               data-bs-toggle="popover" data-bs-trigger="hover focus"
+               data-bs-placement="left"
+               title="Dance Cardio"
+               data-bs-content="Nikmati latihan Dance Cardio untuk menjaga tubuh tetap bugar sambil bersenang-senang. Cocok untuk semua level!">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Dance Cardio</h5>
+            <p class="card-text">Latihan menyenangkan yang menggabungkan tarian dengan cardio untuk membakar kalori. Klik di bawah ini untuk melihat videonya:</p>
+            <div class="mt-auto">
+              <a href="https://youtu.be/D4-9N7edll0?si=4owTBEad2N5gmORQ" target="_blank" class="btn btn-outline-primary">Lihat Dance Cardio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 5 -->
+      <div class="col">
+        <div class="card h-100 shadow-lg">
+          <img src="https://i.pinimg.com/originals/22/d0/1f/22d01f7f0b82e9c5c8d590a63024d62a.jpg" class="card-img-top" alt="Cardio and Full Body Workout"
+               data-bs-toggle="popover" data-bs-trigger="hover focus"
+               data-bs-placement="left"
+               title="Cardio & Full Body Workout"
+               data-bs-content="Latihan intensitas tinggi yang menggabungkan cardio dan latihan seluruh tubuh untuk pembentukan otot dan pembakaran lemak maksimal.">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Cardio and Full Body Workout</h5>
+            <p class="card-text">Sesi latihan yang intens untuk meningkatkan massa otot sambil membakar lemak. Klik di bawah ini untuk melihat videonya:</p>
+            <div class="mt-auto">
+              <a href="https://youtu.be/SVMXa2FDh58?si=kM6A6H2Z9mAN6P4n" target="_blank" class="btn btn-outline-primary">Lihat Full Body Workout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 6 -->
+      <div class="col">
+        <div class="card h-100 shadow-lg">
+          <img src="https://i.pinimg.com/736x/aa/59/e2/aa59e25b035f095faa77e1ee7b3646cc--zumba.jpg" class="card-img-top" alt="Aerobik Cardio"
+               data-bs-toggle="popover" data-bs-trigger="hover focus"
+               data-bs-placement="left"
+               title="Aerobik Cardio"
+               data-bs-content="Latihan aerobik yang meningkatkan kebugaran kardiovaskular serta stamina tubuh. Cocok untuk latihan harian.">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Aerobik Cardio</h5>
+            <p class="card-text">Latihan aerobik yang dirancang untuk meningkatkan kebugaran kardiovaskular Anda. Klik di bawah ini untuk melihat videonya:</p>
+            <div class="mt-auto">
+              <a href="https://youtu.be/y5OabVgga0E?si=_M6e7ptUYdgu4gil" target="_blank" class="btn btn-outline-primary">Lihat Latihan Aerobik</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- End of Section: Workout Plans -->
+ <!-- Backdrop for Blur Background -->
+ <div id="backdrop" class="blur-background d-none"></div>
+
+ <script>
+   // Get modal and backdrop elements
+   const modal = new bootstrap.Modal(document.getElementById('subscribeModal'));
+   const backdrop = document.getElementById('backdrop');
+   const openModalBtn = document.getElementById('openModalBtn');
+
+   // Open the modal and show backdrop when the "open modal" button is clicked
+   openModalBtn.addEventListener('click', function() {
+     modal.show();  // Show the modal
+     backdrop.classList.remove('d-none'); // Show the backdrop with blur effect
+   });
+
+   // Close modal and remove backdrop when modal is closed
+   document.querySelector('.btn-close').addEventListener('click', function() {
+     modal.hide();
+     backdrop.classList.add('d-none');
+   });
+ </script>
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light pt-4">
+      <div class="container">
+        <div class="row">
+          <!-- Left Section: Navigation Links and Social Media Icons -->
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><a href="#home" class="text-light">Home</a></li>
+              <li><a href="#" class="text-light">About Us</a></li>
+              <li><a href="#" class="text-light">Products</a></li>
+              <li><a href="#" class="text-light">Contact Us</a></li>
+            </ul>
+            <div class="wrapper d-flex justify-content-center my-4">
+              <div class="button">
+                <a href="https://facebook.com" target="_blank">
+                  <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                  <span>Facebook</span>
+                </a>
+              </div>
+              <div class="button">
+                <a href="https://twitter.com" target="_blank">
+                  <div class="icon"><i class="fab fa-twitter"></i></div>
+                  <span>Twitter</span>
+                </a>
+              </div>
+              <div class="button">
+                <a href="https://github.com/NicholasHG25/Front-End-UTS" target="_blank">
+                  <div class="icon"><i class="fab fa-github"></i></div>
+                  <span>Github</span>
+                </a>
+              </div>
+              <div class="button">
+                <a href="https://instagram.com" target="_blank">
+                  <div class="icon"><i class="fab fa-instagram"></i></div>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Right Section: Contact Us Form -->
+          <div class="col-md-6 contact-me">
+            <h5>Contact Us</h5>
+            <form class="contact-form">
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter email">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control form-control-sm" id="exampleMessage" rows="3" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-sm">Send</button>
+          </form>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="text-center">
+        <p class="mb-0" style="height: 50px;">&copy; 2024 StayHealthy. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Subscription -->
+  <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content subscribe-card">
+        <div class="modal-header">
+          <h5 class="modal-title" id="subscribeModalLabel">Berlangganan untuk Mengakses Konten</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Silakan masukkan email Anda untuk berlangganan dan menikmati konten premium kami.</p>
+          <form id="subscribeForm">
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="Masukkan email Anda" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Berlangganan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Script for Popover -->
+  <script>
+    // Inisialisasi semua elemen dengan data-bs-toggle="popover"
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl);
+    });
+  </script>
+  
+  <!-- Script for Modal -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const subscriptionModal = new bootstrap.Modal(document.getElementById("subscribeModal"));
+  const blurBackground = document.getElementById("backdrop");
+
+  // Tampilkan modal dan blur saat modal dibuka
+  subscriptionModal.show();
+  blurBackground.classList.remove("d-none");
+
+  // Hapus blur dan arahkan pengguna kembali ke index.html saat tombol X diklik
+  document.querySelector(".btn-close").addEventListener("click", function () {
+    subscriptionModal.hide();
+    blurBackground.classList.add("d-none");
+
+    // Arahkan ke index.html
+    window.location.href = "index.html";
+  });
+});
+  </script>
+  </body>
+  
+</html>
+

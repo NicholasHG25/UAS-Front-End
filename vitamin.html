@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StayHealthy</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">StayHealthy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-left" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sports">Olahraga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rekomen">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resep">Resep</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gizi">Nutrisi</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="pages/login.html" class="text-white me-3">
+                        <i class="fas fa-user fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white me-3">
+                        <i class="fas fa-search fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Menu Navigasi-->
+<!-- Vitamin Shop Section -->
+<section id="rekomen" class="container mt-5">
+    <h2 class="text-center mb-4">Vitamin Shop</h2>
+    <p class="text-center mb-5">Jelajahi dan beli berbagai vitamin penting untuk kesehatan Anda.</p>
+
+    <!-- Filters for Category, Price Range -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <select class="form-select" aria-label="Sort By">
+                <option selected>Urutkan berdasarkan</option>
+                <option value="priceLow">Harga: Rendah ke Tinggi</option>
+                <option value="priceHigh">Harga: Tinggi ke Rendah</option>
+                <option value="popular">Paling Populer</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Cards -->
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Vitamin 1 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Vitamin A">
+                <div class="card-body">
+                    <h5 class="card-title">Vitamin A</h5>
+                    <p class="card-text">Mendukung penglihatan, kesehatan kulit, dan fungsi kekebalan tubuh.</p>
+                    <p class="price">Rp.100.000</p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-primary">Tambah ke Keranjang</button>
+                        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#vitaminAModal">Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vitamin 2 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Vitamin C">
+                <div class="card-body">
+                    <h5 class="card-title">Vitamin C</h5>
+                    <p class="card-text">Meningkatkan sistem kekebalan tubuh dan membantu produksi kolagen.</p>
+                    <p class="price">Rp.100.000</p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-primary">Tambah ke Keranjang</button>
+                        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#vitaminCModal">Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vitamin 3 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Vitamin D">
+                <div class="card-body">
+                    <h5 class="card-title">Vitamin D</h5>
+                    <p class="card-text">Mendukung penyerapan kalsium dan kesehatan tulang.</p>
+                    <p class="price">Rp.90.000</p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-primary">Tambah ke Keranjang</button>
+                        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#vitaminDModal">Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vitamin 4 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Vitamin E">
+                <div class="card-body">
+                    <h5 class="card-title">Vitamin E</h5>
+                    <p class="card-text">Sebuah antioksidan yang membantu melindungi sel dari kerusakan.</p>
+                    <p class="price">Rp.100.000</p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-primary">Tambah ke Keranjang</button>
+                        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#vitaminEModal">Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vitamin 5 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Vitamin B12">
+                <div class="card-body">
+                    <h5 class="card-title">Vitamin B12</h5>
+                    <p class="card-text">Penting untuk fungsi saraf dan produksi sel darah merah.</p>
+                    <p class="price">Rp.120.000</p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-primary">Tambah ke Keranjang</button>
+                        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#vitaminB12Modal">Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Windows -->
+<!-- Vitamin A Modal -->
+<div class="modal fade" id="vitaminAModal" tabindex="-1" aria-labelledby="vitaminAModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vitaminAModalLabel">Vitamin A</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Vitamin A mendukung penglihatan, kesehatan kulit, dan fungsi kekebalan tubuh. Memiliki manfaat besar untuk menjaga kesehatan mata dan kulit yang sehat.</p>
+                <p><strong>Harga:</strong> Rp.100.000</p>
+                <p><strong>Deskripsi:</strong> Vitamin A sangat penting untuk mendukung fungsi penglihatan yang sehat, serta berperan dalam menjaga kulit yang sehat dan memperkuat sistem kekebalan tubuh.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vitamin C Modal -->
+<div class="modal fade" id="vitaminCModal" tabindex="-1" aria-labelledby="vitaminCModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vitaminCModalLabel">Vitamin C</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Vitamin C meningkatkan sistem kekebalan tubuh dan membantu produksi kolagen. Vitamin ini juga bermanfaat untuk menjaga kesehatan kulit.</p>
+                <p><strong>Harga:</strong> Rp.100.000</p>
+                <p><strong>Deskripsi:</strong> Vitamin C berperan penting dalam menjaga sistem kekebalan tubuh yang sehat serta membantu proses produksi kolagen untuk kulit yang lebih elastis dan sehat.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vitamin D Modal -->
+<div class="modal fade" id="vitaminDModal" tabindex="-1" aria-labelledby="vitaminDModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vitaminDModalLabel">Vitamin D</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Vitamin D mendukung penyerapan kalsium dan kesehatan tulang. Ini juga penting untuk kekuatan otot dan sistem kekebalan tubuh.</p>
+                <p><strong>Harga:</strong> Rp.90.000</p>
+                <p><strong>Deskripsi:</strong> Vitamin D membantu tubuh menyerap kalsium untuk menjaga kesehatan tulang, serta berperan dalam menjaga kesehatan sistem kekebalan tubuh.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vitamin E Modal -->
+<div class="modal fade" id="vitaminEModal" tabindex="-1" aria-labelledby="vitaminEModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vitaminEModalLabel">Vitamin E</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Vitamin E adalah antioksidan yang membantu melindungi sel dari kerusakan akibat radikal bebas. Ini juga mendukung kesehatan kulit dan memperbaiki jaringan tubuh.</p>
+                <p><strong>Harga:</strong> Rp.100.000</p>
+                <p><strong>Deskripsi:</strong> Vitamin E berperan penting dalam melindungi sel tubuh dari kerusakan oksidatif dan mendukung pemulihan jaringan tubuh. Vitamin ini juga bermanfaat untuk menjaga kulit tetap sehat dan halus.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vitamin B12 Modal -->
+<div class="modal fade" id="vitaminB12Modal" tabindex="-1" aria-labelledby="vitaminB12ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vitaminB12ModalLabel">Vitamin B12</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Vitamin B12 sangat penting untuk fungsi saraf dan produksi sel darah merah. Ini membantu menjaga sistem saraf yang sehat dan meningkatkan energi.</p>
+                <p><strong>Harga:</strong> Rp.120.000</p>
+                <p><strong>Deskripsi:</strong> Vitamin B12 membantu produksi sel darah merah yang sehat, mendukung sistem saraf, dan berperan dalam menjaga energi tubuh secara keseluruhan.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer bg-dark text-light pt-4">
+    <div class="container">
+        <div class="row">
+            <!-- Left Section: Navigation Links and Social Media Icons -->
+            <div class="col-md-12">
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="text-light">Home</a></li>
+                    <li><a href="pages/about.html" class="text-light">About Us</a></li>
+                    <li><a href="#" class="text-light">Shop</a></li>
+                    <li><a href="pages/contact.html" class="text-light">Contact Us</a></li>
+                </ul>
+                <!-- Social Media Icons -->
+                <div class="wrapper d-flex justify-content-center my-4">
+                    <div class="button">
+                        <a href="https://facebook.com" target="_blank">
+                            <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                    <div class="button">
+                        <a href="https://twitter.com" target="_blank">
+                            <div class="icon"><i class="fab fa-twitter"></i></div>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                    <div class="button">
+                        <a href="https://github.com/NicholasHG25/UAS-untuk-CLone.git" target="_blank">
+                            <div class="icon"><i class="fab fa-github"></i></div>
+                            <span>Github</span>
+                        </a>
+                    </div>
+                    <div class="button">
+                        <a href="https://instagram.com" target="_blank">
+                            <div class="icon"><i class="fab fa-instagram"></i></div>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="border-secondary">
+        <div class="text-center">
+            <p class="mb-0" style="height: 50px;">&copy; 2024 StayHealthy. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+bikinkan responsif
